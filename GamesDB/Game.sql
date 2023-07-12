@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Game]
+(
+	[Game_ID] INT NOT NULL IDENTITY,
+	[AnneeDeSortie] INT NOT NULL,
+	[Genre_ID] INT NOT NULL,
+	[Descriptif] NVARCHAR(256) NOT NULL
+
+	CONSTRAINT PK_Game PRIMARY KEY (Game_ID),
+	CONSTRAINT FK_Game_Genre FOREIGN KEY (Genre_ID) REFERENCES Genre (Genre_ID)
+
+)
